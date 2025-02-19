@@ -1,12 +1,14 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class CollectableScript: MonoBehaviour
 {
         [Header("Parameters")]
         [Range(1f, 360f)] [SerializeField] private float rotationSpeed = 70f;
+        [Range(1f, 360f)] [SerializeField] private float PlayerSpeedStep = 1f;
 
         [Header("Events")]
         public UnityEvent OnPlayerEnter;
@@ -28,6 +30,13 @@ public class CollectableScript: MonoBehaviour
                 {
                         OnPlayerEnter?.Invoke();
                         gameObject.SetActive(false);
+                        
+                        // если не первая сцена то увеличиваем скорость игрока 
+                        if (SceneManager.GetActiveScene().buildIndex != 0)
+                        {
+                                // получаем скрипт игрока и увеличиваем его скорость
+                                other.gameObject.GetComponent<PlayerScript>().IncreaseSpeed(PlayerSpeedStep);
+                        }
                 }
         }
 }

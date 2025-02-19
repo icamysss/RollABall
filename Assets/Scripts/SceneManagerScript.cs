@@ -16,6 +16,7 @@ public class SceneManagerScript: MonoBehaviour
         
         public void ReloadScene()
         {
+                UnfreezeScene();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 }

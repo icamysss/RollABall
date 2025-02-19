@@ -19,8 +19,8 @@ public class PlayerScript : MonoBehaviour
     
     float movementX = 0.0f;
     float movementY = 0.0f;
-    
-    bool onFloor;
+
+    [SerializeField] private bool onFloor;
 
     private void Start()
     {
@@ -53,6 +53,18 @@ public class PlayerScript : MonoBehaviour
         cameraControll.Follow();
     }
 
+    // увеличивает скорость на данное значение
+    public void IncreaseSpeed(float amount)
+    {
+        speed += amount;
+    }
+    
+    // устанавливает силу прыжка
+    public void SetJumpForce(float amount)
+    {
+        jumpForce = amount;
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Floor")) onFloor = true;

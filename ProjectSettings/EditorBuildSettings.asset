@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Rolling_Ball.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Levels/Level_0.unity
+    guid: dc8662d8806254050b959e64d30455e0
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_1.unity
+    guid: 2ae2cef79a94f4154a7a3b03f48d653d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_2.unity
+    guid: cc0d1397d15224665bef9c8292fead77
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_3.unity
+    guid: ff2b311a769a141078fb4164f230ced1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

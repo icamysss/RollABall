@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 70
+  PlayerSpeedStep: 2
   OnPlayerEnter:
     m_PersistentCalls:
       m_Calls: []
