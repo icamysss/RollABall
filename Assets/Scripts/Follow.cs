@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class Follow : MonoBehaviour
 {
         public GameObject player;
         private Vector3 offset;
