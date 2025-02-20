@@ -44,19 +44,20 @@ public class TimerUI : MonoBehaviour
     // оценка результата
     public void EvaluatePerformance()
     {
+        gameResult.text = "Вы прошли уровень за " + seconds + " сек.";
        
-        if (seconds < excellentTime)
-        {
-            gameResult.text = "Отлично! Вы прошли уровень очень быстро.";
-        }
-        else if (seconds < goodTime)
-        {
-            gameResult.text = "Хорошо! Вы прошли уровень за среднее время.";
-        }
-        else
-        {
-            gameResult.text = "Можно лучше! Попробуйте пройти уровень быстрее.";
-        }
+        // if (seconds < excellentTime)
+        // {
+        //     gameResult.text = "Отлично! Вы прошли уровень очень быстро.";
+        // }
+        // else if (seconds < goodTime)
+        // {
+        //     gameResult.text = "Хорошо! Вы прошли уровень за среднее время.";
+        // }
+        // else
+        // {
+        //     gameResult.text = "Можно лучше! Попробуйте пройти уровень быстрее.";
+        // }
     }
     // сброс нашего таймера 
     public void ResetTimer()
