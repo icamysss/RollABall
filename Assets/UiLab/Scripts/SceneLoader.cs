@@ -32,6 +32,11 @@ public static class SceneLoader
         sceneLoader.LoadLevel(index);
     }
 
+    public static int GetCurrentLevelIndex()
+    {
+        return sceneLoader.LevelIndex();
+    }
+
     public static void LoadNextLevel()
     {
         sceneLoader.LoadNextLevel();

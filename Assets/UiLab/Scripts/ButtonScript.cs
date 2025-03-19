@@ -65,6 +65,8 @@ public class ButtonScript : MonoBehaviour
             }
         }
     }
+   
+    
     // когда лень в инспекторе прокидывать
     private void OnValidate()
     {

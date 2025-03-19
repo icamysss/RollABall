@@ -70,6 +70,11 @@ public class SceneLoaderMb : MonoBehaviour
             LoadLevel(loadingScreen);
         }
     }
+
+    public int LevelIndex()
+    {
+        return currentLevelIndex;
+    }
     
     public int GetLevelsCount() {return levels.Count;}
 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class LevelSelectorScript : MonoBehaviour
@@ -17,6 +18,8 @@ public class LevelSelectorScript : MonoBehaviour
         {
             var button = Instantiate(buttonPrefab, content);
             button.SetText((i+1).ToString());
+            var k = "Level" + i;
+            button.Stars = PlayerPrefs.GetInt(k);;
             var index = i;
             button.GetButton().onClick.AddListener(() => SceneLoader.LoadLevel(index));
             

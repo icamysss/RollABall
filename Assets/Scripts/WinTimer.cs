@@ -17,6 +17,7 @@ namespace DefaultNamespace
             seconds = 5 ; 
             timer = 0;
             UpdateTimerDisplay(seconds);
+            OnTimerEnd.AddListener(OnTimer);
         }
 
         private void Update()
@@ -45,6 +46,10 @@ namespace DefaultNamespace
             timerText.text = seconds.ToString();
         }
 
+        private void OnTimer()
+        {
+            SceneLoader.LoadNextLevel();
+        }
         // старт нашего таймера 
         public void StartTimer()
         {
