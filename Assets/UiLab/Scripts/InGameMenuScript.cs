@@ -16,6 +16,12 @@ public class InGameMenuScript : MonoBehaviour
         SceneLoader.LoadNextLevel();
     }
 
+    public void Continue()
+    {
+        Time.timeScale = 1f;
+        changeMenuStatus();
+    }
+    
     public void quitGame()
     {
         Application.Quit();

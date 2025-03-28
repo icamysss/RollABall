@@ -3968,7 +3968,7 @@ MonoBehaviour:
   OnTimerEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954516395}
+      - m_Target: {fileID: 954516397}
         m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 1

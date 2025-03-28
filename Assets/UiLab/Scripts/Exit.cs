@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 namespace UiLab.Scripts
@@ -6,7 +7,11 @@ namespace UiLab.Scripts
     {
         public void ExitGame()
         {
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else 
             Application.Quit();
+#endif
         }
     }
 }
