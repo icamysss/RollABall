@@ -1,10 +1,20 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSelectorScript : MonoBehaviour
 {
     [SerializeField] private ButtonScript buttonPrefab;
     [SerializeField] private Transform content;
+
+    private Button btn;
+
+    private void Start()
+    {
+        btn  = GetComponent<Button>();
+        if (btn == null) return;
+        btn.onClick.AddListener(AudioManager.instance.Click);
+    }
 
     public void BuildLevelSelector()
     {

@@ -11,6 +11,7 @@ public class KillBoxScript: MonoBehaviour
                 if (other.CompareTag("Player"))
                 {
                         OnPlayerEnter?.Invoke();
+                        AudioManager.instance.Lose();
                 }
         }
 }

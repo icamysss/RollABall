@@ -28,6 +28,7 @@ public class CollectableScript: MonoBehaviour
         {
                 if (other.CompareTag("Player"))
                 {
+                        AudioManager.instance.Collect();
                         OnPlayerEnter?.Invoke();
                         gameObject.SetActive(false);
                         

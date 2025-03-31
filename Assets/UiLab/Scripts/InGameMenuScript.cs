@@ -8,18 +8,21 @@ public class InGameMenuScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneLoader.LoadMainMenu();
+        AudioManager.instance.Click();
     }
 
     public void loadNextLevel()
     {
         Time.timeScale = 1f;
         SceneLoader.LoadNextLevel();
+        AudioManager.instance.Click();
     }
 
     public void Continue()
     {
         Time.timeScale = 1f;
         changeMenuStatus();
+        AudioManager.instance.Click();
     }
     
     public void quitGame()

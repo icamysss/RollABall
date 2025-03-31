@@ -13,7 +13,7 @@ public class ButtonScript : MonoBehaviour
 
     private void Start()
     {
-        //button.onClick.AddListener(AddStars);
+        button.onClick.AddListener(AudioManager.instance.Click);
     }
 
     public void SetText(string buttonText) => text.text = buttonText;

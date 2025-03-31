@@ -30,7 +30,11 @@ public class ScoreBoardScript : MonoBehaviour
         collected++;
         updateScoreText(collected, collectablesCount);
         
-        if (collected >= collectablesCount) OnCollectAll?.Invoke();
+        if (collected >= collectablesCount)
+        {
+            OnCollectAll?.Invoke();
+            AudioManager.instance.Win();
+        }
     }
 
 

@@ -15,6 +15,7 @@ public class TransparentInfoPanelScript : MonoBehaviour
         public void ShowPanel()
         {
                 animator.SetBool(IsVisible, true);
+                AudioManager.instance.Click();
         }
 
         public void HidePanel()
